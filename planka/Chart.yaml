@@ -1,0 +1,13 @@
+apiVersion: v2
+name: planka
+description: A Helm chart for Planka, the Trello clone.
+
+type: application
+version: 0.0.1
+
+appVersion: "1.16.0"
+
+dependencies:
+  - name: planka
+    version: 0.2.19
+    repository: 
