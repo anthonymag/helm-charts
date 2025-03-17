@@ -1,0 +1,3 @@
+[submodule "submodules/planka"]
+	path = submodules/planka
+	url = git@github.com:plankanban/planka.git

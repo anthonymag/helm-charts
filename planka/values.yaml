@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ghcr.io/plankanban/planka
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -14,11 +14,26 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+# Generate a secret using openssl rand -base64 45
+secretkey: ""
+
+## @param existingSecretkeySecret Name of an existing secret containing the session key string
+## NOTE: Must contain key `key`
+## NOTE: When it's set, the secretkey parameter is ignored
+existingSecretkeySecret: ""
+
+## @param existingAdminCredsSecret Name of an existing secret containing the admin username and password
+## NOTE: Must contain keys `username` and `password`
+## NOTE: When it's set, the `admin_username` and `admin_password` parameters are ignored
+existingAdminCredsSecret: ""
+
+# Base url for Planka. Will override `ingress.hosts[0].host`
+# Defaults to `http://localhost:3000` if ingress is disabled.
+baseUrl: ""
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
-  # Automatically mount a ServiceAccount's API credentials?
-  automount: true
   # Annotations to add to the service account
   annotations: {}
   # The name of the service account to use.
@@ -26,7 +41,6 @@ serviceAccount:
   name: ""
 
 podAnnotations: {}
-podLabels: {}
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -40,8 +54,13 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  annotations: {}
   type: ClusterIP
-  port: 80
+  port: 1337
+  ## @param service.containerPort Planka HTTP container port
+  ## If empty will default to 1337
+  ##
+  containerPort: 1337
 
 ingress:
   enabled: false
@@ -50,14 +69,15 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: chart-example.local
+    # Used to set planka BASE_URL if no `baseurl` is provided.
+    - host: planka.local
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: []
-  #  - secretName: chart-example-tls
+  #  - secretName: planka-tls
   #    hosts:
-  #      - chart-example.local
+  #      - planka.local
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -71,15 +91,6 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /
-    port: http
-readinessProbe:
-  httpGet:
-    path: /
-    port: http
-
 autoscaling:
   enabled: false
   minReplicas: 1
@@ -87,21 +98,115 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-# Additional volumes on the output Deployment definition.
-volumes: []
-# - name: foo
-#   secret:
-#     secretName: mysecret
-#     optional: false
-
-# Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
-
 nodeSelector: {}
 
 tolerations: []
 
 affinity: {}
+
+postgresql:
+  enabled: true
+  auth:
+    database: planka
+    username: planka
+    password: ""
+    postgresPassword: ""
+    replicationPassword: ""
+    # existingSecret: planka-postgresql
+  serviceBindings:
+    enabled: true
+
+## Set this or existingDburlSecret if you disable the built-in postgresql deployment
+dburl:
+
+## @param existingDburlSecret Name of an existing secret containing a DBurl connection string
+## NOTE: Must contain key `uri`
+## NOTE: When it's set, the `dburl` parameter is ignored
+##
+existingDburlSecret: ""
+
+## PVC-based data storage configuration
+persistence:
+  enabled: false
+  # existingClaim: netbox-data
+  # storageClass: "-"
+  accessMode: ReadWriteOnce
+  size: 10Gi
+
+## OpenID Identity Management configuration
+##
+## Example:
+## ---------------
+## oidc:
+##   enabled: true
+##   clientId: sxxaAIAxVXlCxTmc1YLHBbQr8NL8MqLI2DUbt42d
+##   clientSecret: om4RTMRVHRszU7bqxB7RZNkHIzA8e4sGYWxeCwIMYQXPwEBWe4SY5a0wwCe9ltB3zrq5f0dnFnp34cEHD7QSMHsKvV9AiV5Z7eqDraMnv0I8IFivmuV5wovAECAYreSI
+##   issuerUrl: https://auth.local/application/o/planka/
+##   admin:
+##     roles:
+##       - planka-admin
+##
+## ---------------
+## NOTE: A minimal configuration requires setting `clientId`, `clientSecret` and `issuerUrl`. (plus `admin.roles` for administrators)
+## ref: https://docs.planka.cloud/docs/Configuration/OIDC
+##
+oidc:
+  ## @param oidc.enabled Enable single sign-on (SSO) with OpenID Connect (OIDC)
+  ##
+  enabled: false
+
+  ## OIDC credentials
+  ## @param oidc.clientId A string unique to the provider that identifies your app.
+  ## @param oidc.clientSecret A secret string that the provider uses to confirm ownership of a client ID.
+  ##
+  ## NOTE: Either specify inline `clientId` and `clientSecret` or refer to them via `existingSecret`
+  ##
+  clientId: ""
+  clientSecret: ""
+
+  ## @param oidc.existingSecret Name of an existing secret containing OIDC credentials
+  ## NOTE: Must contain key `clientId` and `clientSecret`
+  ## NOTE: When it's set, the `clientId` and `clientSecret` parameters are ignored
+  ##
+  existingSecret: ""
+
+  ## @param oidc.issuerUrl The OpenID connect metadata document endpoint
+  ##
+  issuerUrl: ""
+
+  ## @param oidc.scopes A list of scopes required for OIDC client.
+  ## If empty will default to `openid`, `profile` and `email`
+  ## NOTE: Planka needs the email and name claims
+  ##
+  scopes: []
+
+  ## Admin permissions configuration
+  admin:
+    ## @param oidc.admin.ignoreRoles If set to true, the admin roles will be ignored.
+    ## It is useful if you want to use OIDC for authentication but not for authorization.
+    ## If empty will default to `false`
+    ##
+    ignoreRoles: false
+
+    ## @param oidc.admin.rolesAttribute The name of a custom group claim that you have configured in your OIDC provider
+    ## If empty will default to `groups`
+    ##
+    rolesAttribute: groups
+
+    ## @param oidc.admin.roles The names of the admin groups
+    ##
+    roles: []
+      # - planka-admin
+
+## Extra environment variables for planka deployment
+## Supports hard coded and getting values from a k8s secret
+## - name: test
+##   value: valuetest
+## - name: another
+##   value: another
+## - name: test-secret
+##   valueFrom:
+##     secretName: k8s-secret-name
+##     key: key-inside-the-secret
+##
+extraEnv: []
