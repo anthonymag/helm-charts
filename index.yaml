@@ -1,20 +1,24 @@
 apiVersion: v1
 entries:
-  helm-chart-test:
+  argocd:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2025-03-18T16:42:14.187223366-04:00"
-    description: A Helm chart for Kubernetes
-    digest: c29552add8dfd703349adea78f054cd7e4dab89bb51e2470ee70df7e7cd12bfe
-    name: helm-chart-test
-    type: application
+    created: "2025-03-18T18:45:56.595215377-04:00"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.8.12
+    description: ArgoCD, GitOps CD for k8s
+    digest: ee693a68ca090e89d536b56c778f21d56b9d401960d568580feae7f7a9a9e8cc
+    home: https://github.com/argoproj/argo-helm
+    icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
+    name: argocd
     urls:
-    - https://anthonymag.github.io/helm-charts/helm-chart-test-0.1.0.tgz
+    - https://anthonymag.github.io/helm-charts/argocd-0.1.0.tgz
     version: 0.1.0
   planka:
   - apiVersion: v2
     appVersion: 1.25.1
-    created: "2025-03-18T16:42:14.188663648-04:00"
+    created: "2025-03-18T18:45:56.597192209-04:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -28,7 +32,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.25.1
-    created: "2025-03-18T16:42:14.187966382-04:00"
+    created: "2025-03-18T18:45:56.596349782-04:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -40,4 +44,4 @@ entries:
     urls:
     - https://anthonymag.github.io/helm-charts/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2025-03-18T16:42:14.186859797-04:00"
+generated: "2025-03-18T18:45:56.577800737-04:00"
