@@ -3,4 +3,4 @@ dependencies:
   repository: file://../submodules/planka/charts/planka
   version: 0.2.22
 digest: sha256:93100af801605c8e8ee20067257e7d0b85f70fd7444c4b125b6c35ab868699d8
-generated: "2025-03-17T12:47:40.199884195-04:00"
+generated: "2025-03-18T15:31:36.55996615-04:00"
