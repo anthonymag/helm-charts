@@ -3,7 +3,7 @@ entries:
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-03-16T17:05:30.488317088-04:00"
+    created: "2025-03-18T16:12:57.182506356-04:00"
     description: A Helm chart for Kubernetes
     digest: c29552add8dfd703349adea78f054cd7e4dab89bb51e2470ee70df7e7cd12bfe
     name: helm-chart-test
@@ -11,4 +11,19 @@ entries:
     urls:
     - https://anthonymag.github.io/helm-charts/helm-chart-test-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-16T17:05:30.487626111-04:00"
+  planka:
+  - apiVersion: v2
+    appVersion: 1.25.1
+    created: "2025-03-18T16:12:57.184376797-04:00"
+    dependencies:
+    - name: planka
+      repository: file://../submodules/planka/charts/planka
+      version: 0.2.22
+    description: A Helm chart for Planka, the Trello clone.
+    digest: 9ff7644836b1180095063723cc0ce56eb519f9c4db417fc3566bea468d5a0305
+    name: planka
+    type: application
+    urls:
+    - https://anthonymag.github.io/helm-charts/planka-0.0.1.tgz
+    version: 0.0.1
+generated: "2025-03-18T16:12:57.175929666-04:00"
