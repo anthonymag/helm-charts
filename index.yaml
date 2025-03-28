@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   argocd:
   - apiVersion: v2
-    created: "2025-03-18T18:45:56.595215377-04:00"
+    created: "2025-03-28T16:44:56.708827483-04:00"
     dependencies:
     - name: argo-cd
       repository: https://argoproj.github.io/argo-helm
@@ -15,10 +15,26 @@ entries:
     urls:
     - https://anthonymag.github.io/helm-charts/argocd-0.1.0.tgz
     version: 0.1.0
+  cloudnative-pg:
+  - apiVersion: v2
+    created: "2025-03-28T16:44:56.715713639-04:00"
+    dependencies:
+    - name: cloudnative-pg
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.23.2
+    description: CNPG operator for PostgreSQL
+    digest: 0bc22c75f44da9d2380c455fe8dc7cf6f376993822d198b368d33f2b9f9ce3ee
+    home: https://cloudnative-pg.io
+    icon: https://raw.githubusercontent.com/cloudnative-pg/artwork/main/cloudnativepg-logo.svg
+    name: cloudnative-pg
+    type: application
+    urls:
+    - https://anthonymag.github.io/helm-charts/cloudnative-pg-0.1.0.tgz
+    version: 0.1.0
   planka:
   - apiVersion: v2
     appVersion: 1.25.1
-    created: "2025-03-18T18:45:56.597192209-04:00"
+    created: "2025-03-28T16:44:56.71790816-04:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -32,7 +48,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.25.1
-    created: "2025-03-18T18:45:56.596349782-04:00"
+    created: "2025-03-28T16:44:56.716882839-04:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -44,4 +60,4 @@ entries:
     urls:
     - https://anthonymag.github.io/helm-charts/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2025-03-18T18:45:56.577800737-04:00"
+generated: "2025-03-28T16:44:56.688356833-04:00"
