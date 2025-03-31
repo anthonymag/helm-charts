@@ -2,5 +2,8 @@ dependencies:
 - name: planka
   repository: file://../submodules/planka/charts/planka
   version: 0.2.22
-digest: sha256:93100af801605c8e8ee20067257e7d0b85f70fd7444c4b125b6c35ab868699d8
-generated: "2025-03-18T15:31:36.55996615-04:00"
+- name: cluster
+  repository: https://cloudnative-pg.github.io/charts
+  version: 0.2.1
+digest: sha256:27dc3de1f425a2c4c97b02ec6235105b3351430df91446bc13d35645c22d2dac
+generated: "2025-03-31T17:10:58.723612366-04:00"

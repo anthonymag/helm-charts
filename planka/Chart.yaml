@@ -3,7 +3,7 @@ name: planka
 description: Planka, the Trello clone.
 
 type: application
-version: 0.1.0
+version: 0.2.0
 
 appVersion: "1.25.1"
 
@@ -11,3 +11,7 @@ dependencies:
   - name: planka
     version: 0.2.22
     repository: "file://../submodules/planka/charts/planka"
+  - name: cluster
+    version: 0.2.1
+    repository: "https://cloudnative-pg.github.io/charts"
+
