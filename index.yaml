@@ -13,7 +13,7 @@ entries:
     icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
     name: argocd
     urls:
-    - https://anthonymag.github.io/helm-charts/argocd-0.2.0.tgz
+    - https://anthonymag.github.io/helm-charts/releases/download/argocd-0.2.0/argocd-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
     created: "2025-05-27T13:48:55.693574477-05:00"
@@ -27,7 +27,7 @@ entries:
     icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
     name: argocd
     urls:
-    - https://anthonymag.github.io/helm-charts/argocd-0.1.0.tgz
+    - https://anthonymag.github.io/helm-charts/releases/download/argocd-0.2.0/argocd-0.1.0.tgz
     version: 0.1.0
   cloudnative-pg:
   - apiVersion: v2
@@ -43,7 +43,7 @@ entries:
     name: cloudnative-pg
     type: application
     urls:
-    - https://anthonymag.github.io/helm-charts/cloudnative-pg-0.1.0.tgz
+    - https://anthonymag.github.io/helm-charts/releases/download/argocd-0.2.0/cloudnative-pg-0.1.0.tgz
     version: 0.1.0
   planka:
   - apiVersion: v2
@@ -61,7 +61,7 @@ entries:
     name: planka
     type: application
     urls:
-    - https://anthonymag.github.io/helm-charts/planka-0.2.0.tgz
+    - https://anthonymag.github.io/helm-charts/releases/download/argocd-0.2.0/planka-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.25.1
@@ -75,7 +75,7 @@ entries:
     name: planka
     type: application
     urls:
-    - https://anthonymag.github.io/helm-charts/planka-0.1.0.tgz
+    - https://anthonymag.github.io/helm-charts/releases/download/argocd-0.2.0/planka-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.25.1
@@ -89,6 +89,6 @@ entries:
     name: planka
     type: application
     urls:
-    - https://anthonymag.github.io/helm-charts/planka-0.0.1.tgz
+    - https://anthonymag.github.io/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
 generated: "2025-05-27T13:48:55.668802033-05:00"
