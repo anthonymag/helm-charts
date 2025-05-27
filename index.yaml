@@ -2,7 +2,21 @@ apiVersion: v1
 entries:
   argocd:
   - apiVersion: v2
-    created: "2025-03-31T17:18:43.917229698-04:00"
+    created: "2025-05-27T13:48:55.707479383-05:00"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 8.0.10
+    description: ArgoCD, GitOps CD for k8s
+    digest: 3b9675b635ada87913e37c9bda4f282b2e0b8af8104ccd82c3a53530ed358530
+    home: https://github.com/argoproj/argo-helm
+    icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
+    name: argocd
+    urls:
+    - https://anthonymag.github.io/helm-charts/argocd-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    created: "2025-05-27T13:48:55.693574477-05:00"
     dependencies:
     - name: argo-cd
       repository: https://argoproj.github.io/argo-helm
@@ -17,7 +31,7 @@ entries:
     version: 0.1.0
   cloudnative-pg:
   - apiVersion: v2
-    created: "2025-03-31T17:18:43.922268439-04:00"
+    created: "2025-05-27T13:48:55.712831936-05:00"
     dependencies:
     - name: cloudnative-pg
       repository: https://cloudnative-pg.github.io/charts
@@ -34,7 +48,7 @@ entries:
   planka:
   - apiVersion: v2
     appVersion: 1.25.1
-    created: "2025-03-31T17:18:43.9259461-04:00"
+    created: "2025-05-27T13:48:55.71715217-05:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -51,7 +65,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.25.1
-    created: "2025-03-31T17:18:43.924067225-04:00"
+    created: "2025-05-27T13:48:55.714512081-05:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -65,7 +79,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.25.1
-    created: "2025-03-31T17:18:43.923089633-04:00"
+    created: "2025-05-27T13:48:55.713758427-05:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -77,4 +91,4 @@ entries:
     urls:
     - https://anthonymag.github.io/helm-charts/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2025-03-31T17:18:43.895763475-04:00"
+generated: "2025-05-27T13:48:55.668802033-05:00"
