@@ -45,9 +45,24 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/cloudnative-pg-0.1.0.tgz
     version: 0.1.0
+  lubelogger:
+  - apiVersion: v2
+    appVersion: 1.4.7
+    created: "2025-05-27T15:18:03.288810566-05:00"
+    dependencies:
+    - name: lubelogger
+      repository: https://anza-labs.github.io/charts
+      version: 0.9.3
+    description: Lubelogger
+    digest: 5c9e78bb8eb982ac9e31e4e2666c4f408e7a4fa493e21a1eb9a353bb3e0e5dae
+    name: lubelogger
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/lubelogger-0.1.0/lubelogger-0.1.0.tgz
+    version: 0.1.0
   planka:
   - apiVersion: v2
-    created: "2025-05-27T14:32:14.003676111-05:00"
+    created: "2025-05-27T15:16:24.315614724-05:00"
     dependencies:
     - name: planka
       repository: file://../submodules/planka/charts/planka
@@ -104,4 +119,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2025-05-27T14:32:14.002861502-05:00"
+generated: "2025-05-27T15:18:03.287827814-05:00"

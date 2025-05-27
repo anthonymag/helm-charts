@@ -18,6 +18,7 @@ helm dep up
 From the repository root:
 
 ```
+rm *.tar.gz
 helm package [chart name]
 ```
 
@@ -30,7 +31,8 @@ wget https://raw.githubusercontent.com/anthonymag/helm-charts/refs/heads/main/in
 Update the `index.html`
 
 ```
-helm repo index --url https://github.com/anthonymag/helm-charts/releases/download --merge index.yaml .
+newchart=newchart-x.y.z
+helm repo index --url https://github.com/anthonymag/helm-charts/releases/download/$newchart --merge index.yaml .
 ```
 
 Confirm
