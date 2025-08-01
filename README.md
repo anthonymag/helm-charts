@@ -44,8 +44,7 @@ Stage and commit changes in the chart
 
 ```
 # Don't commit the charts directory
-git add <chartname>/Chart*
-git add <chartname>/values.yaml
+git add <chartname>/Chart* <chartname>/values.yaml index.yaml
 git commit -m "Update xyz in chart"
 ```
 
