@@ -9,7 +9,7 @@ Make sure the chart is well-formed
 helm lint [chart name]
 ```
 
-From within the chart (TODO: confirm necessity):
+From within the chart:
 
 ```
 helm dep up
@@ -18,7 +18,6 @@ helm dep up
 From the repository root:
 
 ```
-rm *.tar.gz
 helm package [chart name]
 ```
 
