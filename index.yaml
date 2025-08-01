@@ -43,22 +43,6 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/argocd-0.1.0.tgz
     version: 0.1.0
-  cloudnative-pg:
-  - apiVersion: v2
-    created: "2025-05-27T13:48:55.712831936-05:00"
-    dependencies:
-    - name: cloudnative-pg
-      repository: https://cloudnative-pg.github.io/charts
-      version: 0.23.2
-    description: CNPG operator for PostgreSQL
-    digest: 0bc22c75f44da9d2380c455fe8dc7cf6f376993822d198b368d33f2b9f9ce3ee
-    home: https://cloudnative-pg.io
-    icon: https://raw.githubusercontent.com/cloudnative-pg/artwork/main/cloudnativepg-logo.svg
-    name: cloudnative-pg
-    type: application
-    urls:
-    - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/cloudnative-pg-0.1.0.tgz
-    version: 0.1.0
   lubelogger:
   - apiVersion: v2
     appVersion: 1.4.7
