@@ -1,6 +1,6 @@
 dependencies:
 - name: planka
   repository: file://../submodules/planka/charts/planka
-  version: 1.0.1
-digest: sha256:e059735c792bb722e8146aeb3aa521d078b9737ae1458657ef18ddcc0820efe5
-generated: "2025-05-27T14:24:39.258556024-05:00"
+  version: 1.0.3
+digest: sha256:e55496bfe7c13fa9e0cab8143df2891ab7cccb43a305b56992d60c07e2996c8f
+generated: "2025-08-01T13:13:55.134776739-05:00"
