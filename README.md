@@ -61,3 +61,9 @@ git push --tags
 ```
 
 Upload the packaged chart to the release in GitHub.
+
+## To update charts from submodules
+
+```
+git submodule update --remote submodules/<submodule_name>
+```
