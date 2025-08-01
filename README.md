@@ -41,4 +41,23 @@ Confirm
 cat index.html
 ```
 
+Stage and commit changes in the chart
 
+```
+# Don't commit the charts directory
+git add <chartname>/Chart*
+git add <chartname>/values.yaml
+git commit -m "Update xyz in chart"
+```
+
+Tag the release
+```
+git tag chartname-version.of.release main
+```
+
+Push with tags
+```
+git push --tags
+```
+
+Upload the packaged chart to the release in GitHub.
