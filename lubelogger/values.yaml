@@ -1,0 +1,29 @@
+lubelogger:
+  
+  replicaCount: 2
+  
+  config:
+    # `Warning`, `Error`, `Critical` and `None`. Learn more at:
+    # https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/
+    LOGLEVEL: Information
+  
+    userConfig:
+      Logging:
+        LogLevel:
+          Default: Information
+          Microsoft.AspNetCore: Warning
+      UseDarkMode: true
+      EnableAuth: false
+      UseMarkDownOnSavedNotes: true
+  
+  secret:
+    create: false
+    name: "lubelogger-creds"
+
+  service:
+    type: NodePort
+  
+  postgres:
+    create: false
+    connect: true
+  
