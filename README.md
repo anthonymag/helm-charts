@@ -24,6 +24,7 @@ helm package [chart name]
 Get the remote index
 
 ```
+# it'll download as index.yaml.1 to avoid conflicting
 wget https://raw.githubusercontent.com/anthonymag/helm-charts/refs/heads/main/index.yaml
 ```
 
@@ -31,7 +32,7 @@ Update the `index.html`
 
 ```
 newchart=newchart-x.y.z
-helm repo index --url https://github.com/anthonymag/helm-charts/releases/download/$newchart --merge index.yaml .
+helm repo index --url https://github.com/anthonymag/helm-charts/releases/download/$newchart --merge index.yaml.1 .
 ```
 
 Confirm
