@@ -56,7 +56,7 @@ git tag chartname-version.of.release main
 
 Push with tags
 ```
-git push --tags
+git push origin <tag_name>
 ```
 
 Upload the packaged chart to the release in GitHub.
