@@ -12,7 +12,10 @@ argo-cd:
       annotations: {}
 
   server:
+    image:
+      tag: REPLACE_IN_ARGOCD
     replicas: 2
     service:
       type: NodePort
       nodePortHttp: 30080
+

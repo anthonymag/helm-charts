@@ -2,12 +2,13 @@ apiVersion: v2
 name: argocd
 description: ArgoCD, GitOps CD for k8s
 
-version: 0.4.5
+version: 0.5.0
 
 home: https://github.com/argoproj/argo-helm
 icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
 
 dependencies:
   - name: argo-cd
-    version: 8.2.5
+    version: 8.3.0
     repository: https://argoproj.github.io/argo-helm
+
