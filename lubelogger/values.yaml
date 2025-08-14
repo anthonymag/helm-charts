@@ -17,6 +17,9 @@ lubelogger:
       EnableAuth: false
       UseMarkDownOnSavedNotes: true
 
+  image:
+    tag: REPLACE_IN_ARGOCD
+
   secret:
     create: false
     name: "lubelogger-creds"
