@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   argocd:
   - apiVersion: v2
-    created: "2025-08-14T15:44:10.67096308-05:00"
+    created: "2025-08-14T15:47:04.310128841-05:00"
     dependencies:
     - name: argo-cd
       repository: https://argoproj.github.io/argo-helm
@@ -13,7 +13,7 @@ entries:
     icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
     name: argocd
     urls:
-    - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.5.0.tgz
+    - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.5.0/argocd-0.5.0.tgz
     version: 0.5.0
   - apiVersion: v2
     created: "2025-08-01T13:18:16.636354595-05:00"
@@ -59,7 +59,7 @@ entries:
     version: 0.1.0
   lubelogger:
   - apiVersion: v2
-    created: "2025-08-14T15:44:10.67364942-05:00"
+    created: "2025-08-14T15:47:04.312411547-05:00"
     dependencies:
     - name: lubelogger
       repository: https://anza-labs.github.io/charts
@@ -69,10 +69,10 @@ entries:
     name: lubelogger
     type: application
     urls:
-    - https://github.com/anthonymag/helm-charts/releases/download/lubelogger-1.0.3.tgz
+    - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.5.0/lubelogger-1.0.3.tgz
     version: 1.0.3
   - apiVersion: v2
-    created: "2025-08-14T15:44:10.672495916-05:00"
+    created: "2025-08-14T15:47:04.311274049-05:00"
     dependencies:
     - name: lubelogger
       repository: https://anza-labs.github.io/charts
@@ -82,7 +82,7 @@ entries:
     name: lubelogger
     type: application
     urls:
-    - https://github.com/anthonymag/helm-charts/releases/download/lubelogger-1.0.2.tgz
+    - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.5.0/lubelogger-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v2
     created: "2025-08-04T18:13:35.438639118-05:00"
@@ -183,4 +183,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2025-08-14T15:44:10.661336562-05:00"
+generated: "2025-08-14T15:47:04.300845189-05:00"
