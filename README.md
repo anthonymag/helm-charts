@@ -56,6 +56,7 @@ git tag chartname-version.of.release main
 
 Push with tags
 ```
+git push
 git push origin <tag_name>
 ```
 
