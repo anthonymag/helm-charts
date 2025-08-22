@@ -38,7 +38,7 @@ helm repo index --url https://github.com/anthonymag/helm-charts/releases/downloa
 Confirm
 
 ```
-cat index.html
+git diff index.html
 ```
 
 Stage and commit changes in the chart
