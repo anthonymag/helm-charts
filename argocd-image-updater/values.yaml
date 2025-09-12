@@ -1,0 +1,9 @@
+# It is not advised to run more than one replica.
+replicaCount: 1
+
+config:
+  # -- Changing the Git commit message
+  gitCommitTemplate: ""
+
+  logLevel: "debug" # changed from 'info'
+
