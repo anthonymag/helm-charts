@@ -59,19 +59,19 @@ entries:
     version: 0.1.0
   argocd-image-updater:
   - apiVersion: v2
-    created: "2025-09-12T17:33:03.732590216-05:00"
+    created: "2025-09-19T15:14:45.750419643-05:00"
     dependencies:
     - name: argocd-image-updater
       repository: https://argoproj.github.io/argo-helm
       version: 0.12.3
     description: ArgoCD Image Updater
-    digest: 095c6dae309343f4face0ad2ce33a82089296da1ba34e39c0e79b5a94bf99b8e
+    digest: 089adabd25050e261932827332e6df3c2cc1fe76674f0ba1f575e05c28015918
     home: https://github.com/argoproj/argo-helm
     icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
     name: argocd-image-updater
     urls:
-    - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-0.1.0/argocd-image-updater-0.1.0.tgz
-    version: 0.1.0
+    - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-0.2.1/argocd-image-updater-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     created: "2025-09-12T17:33:03.733182411-05:00"
     dependencies:
@@ -86,6 +86,20 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-0.2.0/argocd-image-updater-0.2.0.tgz
     version: 0.2.0
+  - apiVersion: v2
+    created: "2025-09-12T17:33:03.732590216-05:00"
+    dependencies:
+    - name: argocd-image-updater
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.12.3
+    description: ArgoCD Image Updater
+    digest: 095c6dae309343f4face0ad2ce33a82089296da1ba34e39c0e79b5a94bf99b8e
+    home: https://github.com/argoproj/argo-helm
+    icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
+    name: argocd-image-updater
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-0.1.0/argocd-image-updater-0.1.0.tgz
+    version: 0.1.0
   lubelogger:
   - apiVersion: v2
     created: "2025-08-22T10:55:45.480056435-07:00"
@@ -238,4 +252,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2025-09-12T17:33:03.731307723-05:00"
+generated: "2025-09-19T15:14:45.749296572-05:00"
