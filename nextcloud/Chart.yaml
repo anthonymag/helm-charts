@@ -1,12 +1,13 @@
 apiVersion: v2
 name: nextcloud
 description: Nextcloud
+icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
 
 type: application
-version: 0.1.1
+version: 0.2.0
 
 dependencies:
   - name: nextcloud
-    version: 8.5.2
+    version: 8.7.0
     repository: "https://nextcloud.github.io/helm/"
 

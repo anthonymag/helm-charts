@@ -15,7 +15,12 @@ From within the chart:
 helm dep up
 ```
 
-From the repository root:
+From the repository root, confirm no other charts are lingering
+```
+rm *.tgz
+```
+
+Package the new chart
 
 ```
 helm package [chart name]
@@ -35,7 +40,7 @@ newchart=newchart-x.y.z
 helm repo index --url https://github.com/anthonymag/helm-charts/releases/download/$newchart --merge index.yaml.1 .
 ```
 
-Confirm
+Confirm the new chart is the **only** addition (other present packaged charts will render this incorrectly).
 
 ```
 git diff index.html
