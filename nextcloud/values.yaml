@@ -142,7 +142,14 @@ nextcloud:
     persistence:
       subPath:
     # if set, we'll template this list to the NEXTCLOUD_TRUSTED_DOMAINS env var
-    trustedDomains: []
+    trustedDomains:
+      - cloud.anthonymag.net
+      - sanji0
+      - sanji0.home.arpa
+      - sanji1
+      - sanji1.home.arpa
+      - sanji2
+      - sanji2.home.arpa
     ## SMTP configuration
     mail:
       enabled: true
