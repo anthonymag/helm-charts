@@ -770,16 +770,16 @@ nextcloud:
     ## Use an additional pvc for the data directory rather than a subpath of the default PVC
     ## Useful to store data on a different storageClass (e.g. on slower disks)
     nextcloudData:
-      enabled: false
+      enabled: true
       # -- If defined, use a hostPath volume for nextcloud data rather than a dynamically defined PVC.
       hostPath:
       subPath:
       labels: {}
       annotations: {}
       # storageClass: "-"
-      # existingClaim:
-      accessMode: ReadWriteOnce
-      size: 8Gi
+      existingClaim: nextcloud-data
+      #accessMode: ReadWriteOnce
+      #size: 8Gi
   
   resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
