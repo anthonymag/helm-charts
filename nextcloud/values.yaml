@@ -132,9 +132,9 @@ nextcloud:
       usernameKey: nextcloud-username
       passwordKey: nextcloud-password
       tokenKey: ""
-      smtpUsernameKey: smtp-username
-      smtpPasswordKey: smtp-password
-      smtpHostKey: smtp-host
+      #smtpUsernameKey: smtp-username
+      #smtpPasswordKey: smtp-password
+      #smtpHostKey: smtp-host
     update: 0
     # If web server is not binding default port, you can define it
     containerPort: 80
@@ -152,9 +152,9 @@ nextcloud:
       - sanji2.home.arpa
     ## SMTP configuration
     mail:
-      enabled: true
-      fromAddress: nextcloud
-      domain: anthonymag.net
+      enabled: false
+      #fromAddress: nextcloud
+      #domain: anthonymag.net
     ## Primary ObjectStore options
     # see: https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/primary_storage.html#configuring-object-storage-as-primary-storage
     objectStore:
