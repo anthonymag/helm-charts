@@ -124,7 +124,7 @@ nextcloud:
     protocol: https
   
   nextcloud:
-    host: nextcloud.magdavis.click
+    host: cloud.anthonymag.net
     ## Use an existing secret
     existingSecret:
       enabled: true
@@ -147,7 +147,7 @@ nextcloud:
     mail:
       enabled: true
       fromAddress: nextcloud
-      domain: magdavis.click
+      domain: anthonymag.net
     ## Primary ObjectStore options
     # see: https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/primary_storage.html#configuring-object-storage-as-primary-storage
     objectStore:

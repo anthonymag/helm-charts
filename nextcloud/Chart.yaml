@@ -4,7 +4,7 @@ description: Nextcloud
 icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
 
 type: application
-version: 1.0.0
+version: 1.1.0
 
 dependencies:
   - name: nextcloud
