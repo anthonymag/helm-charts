@@ -1,7 +1,6 @@
 lubelogger:
   
-  # TODO: configure NFS to be able to share images across nodes and therefore scale up
-  replicaCount: 1
+  replicaCount: 2
   
   config:
     # `Warning`, `Error`, `Critical` and `None`. Learn more at:
@@ -23,6 +22,11 @@ lubelogger:
 
   service:
     type: NodePort
+
+  persistence:
+    data:
+      enabled: true
+      existingClaim: lubelogger-data
   
   postgres:
     create: false

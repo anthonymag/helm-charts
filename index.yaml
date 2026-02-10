@@ -116,6 +116,19 @@ entries:
     version: 0.1.0
   lubelogger:
   - apiVersion: v2
+    created: "2026-02-10T13:13:19.327206433-06:00"
+    dependencies:
+    - name: lubelogger
+      repository: https://anza-labs.github.io/charts
+      version: 1.4.2
+    description: Lubelogger
+    digest: 081b55a1f18247ff3bc1a589211f19b1a2590bc4a1ad441ab650e4e9817ce96e
+    name: lubelogger
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/lubelogger-2.0.0/lubelogger-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
     created: "2025-09-19T17:17:11.339260557-05:00"
     dependencies:
     - name: lubelogger
@@ -444,4 +457,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-02-04T11:19:50.464065438-06:00"
+generated: "2026-02-10T13:13:19.325276255-06:00"
