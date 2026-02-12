@@ -37,7 +37,3 @@ lubelogger:
     create: false
     connect: true
   
-  updateStrategy:
-    rollingUpdate:
-      maxUnavailable: 100%
-
