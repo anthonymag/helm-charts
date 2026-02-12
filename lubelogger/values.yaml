@@ -30,8 +30,8 @@ lubelogger:
 
   persistence:
     data:
-      enabled: false
-#      existingClaim: lubelogger-data
+      enabled: true
+      existingClaim: lubelogger-data
   
   postgres:
     create: false
