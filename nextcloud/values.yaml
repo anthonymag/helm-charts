@@ -834,7 +834,8 @@ nextcloud:
     minPods: 1
     maxPods: 10
   
-  nodeSelector: {}
+  nodeSelector:
+    class: sanji
   
   tolerations: []
   
