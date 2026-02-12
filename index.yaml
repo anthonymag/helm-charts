@@ -2,6 +2,20 @@ apiVersion: v1
 entries:
   argocd:
   - apiVersion: v2
+    created: "2026-02-12T13:44:15.727056656-06:00"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 9.4.1
+    description: ArgoCD, GitOps CD for k8s
+    digest: 1be54336e7509ce22d85e00576475a0b7fc7a2a8495377bf87c43af33e23f5b5
+    home: https://github.com/argoproj/argo-helm
+    icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
+    name: argocd
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/argocd-1.0.1/argocd-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     created: "2026-02-12T13:12:14.286186238-06:00"
     dependencies:
     - name: argo-cd
@@ -537,4 +551,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-02-12T13:12:14.276134536-06:00"
+generated: "2026-02-12T13:44:15.71683763-06:00"

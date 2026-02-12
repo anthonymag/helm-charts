@@ -6,14 +6,16 @@ argo-cd:
 
   global:
     domain: argocd.magdavis.click
+
+    nodeSelector:
+      class: sanji
+
     secret:
       createSecret: true
       labels: {}
       annotations: {}
 
   server:
-    image:
-      tag: REPLACE_IN_ARGOCD
     replicas: 2
     service:
       type: NodePort
