@@ -1,6 +1,9 @@
 lubelogger:
   
   replicaCount: 2
+
+  nodeSelector:
+    class: sanji
   
   config:
     # `Warning`, `Error`, `Critical` and `None`. Learn more at:
