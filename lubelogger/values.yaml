@@ -1,16 +1,16 @@
 lubelogger:
   
-  replicaCount: 2
+  replicaCount: 1
   
   config:
     # `Warning`, `Error`, `Critical` and `None`. Learn more at:
     # https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/
-    LOGLEVEL: Information
+    LOGLEVEL: Debug
   
     userConfig:
       Logging:
         LogLevel:
-          Default: Information
+          Default: Debug
           Microsoft.AspNetCore: Warning
       UseDarkMode: true
       EnableAuth: false
@@ -20,13 +20,18 @@ lubelogger:
     create: false
     name: "lubelogger-creds"
 
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    runAsGroup: 1000
+
   service:
     type: NodePort
 
   persistence:
     data:
-      enabled: true
-      existingClaim: lubelogger-data
+      enabled: false
+#      existingClaim: lubelogger-data
   
   postgres:
     create: false
