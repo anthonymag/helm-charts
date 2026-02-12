@@ -1,6 +1,6 @@
 lubelogger:
   
-  replicaCount: 1
+  replicaCount: 2
   
   config:
     # `Warning`, `Error`, `Critical` and `None`. Learn more at:
@@ -39,5 +39,5 @@ lubelogger:
   
   updateStrategy:
     rollingUpdate:
-      maxUnavailable: 50%
+      maxUnavailable: 100%
 
