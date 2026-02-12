@@ -1,4 +1,8 @@
 argocd-image-updater:
+  
+  nodeSelector:
+    class: sanji
+
   # It is not advised to run more than one replica.
   replicaCount: 1
   

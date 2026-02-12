@@ -59,6 +59,20 @@ entries:
     version: 0.1.0
   argocd-image-updater:
   - apiVersion: v2
+    created: "2026-02-12T12:43:22.580564053-06:00"
+    dependencies:
+    - name: argocd-image-updater
+      repository: https://argoproj.github.io/argo-helm
+      version: 1.1.0
+    description: ArgoCD Image Updater
+    digest: 919ed7d2eeddc023697d1578f9adc3eb5ca5bd4a0cbc0191e876e1e1bd6a6c2b
+    home: https://github.com/argoproj/argo-helm
+    icon: https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png
+    name: argocd-image-updater
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-1.0.1/argocd-image-updater-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     created: "2025-11-26T14:37:12.703875789-06:00"
     dependencies:
     - name: argocd-image-updater
@@ -509,4 +523,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-02-12T10:54:38.645146632-06:00"
+generated: "2026-02-12T12:43:22.579596474-06:00"
