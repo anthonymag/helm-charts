@@ -5,6 +5,9 @@ planka:
   existingAdminCredsSecret: "planka-admin-creds"
   baseUrl: "https://planka.magdavis.click"
 
+  nodeSelector:
+    class: sanji
+
   postgresql:
     enabled: false
 

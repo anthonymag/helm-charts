@@ -482,6 +482,19 @@ entries:
     version: 0.1.0
   planka:
   - apiVersion: v2
+    created: "2026-02-12T14:38:17.572811671-06:00"
+    dependencies:
+    - name: planka
+      repository: http://plankanban.github.io/planka
+      version: 1.1.1
+    description: Planka, the Trello clone.
+    digest: f2b2be2cd976dfcb756f6108807e394e4c95de00e2da48ce24d235acbcf0f75f
+    name: planka
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/planka-1.1.1/planka-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
     created: "2025-12-29T10:04:52.851343387-06:00"
     dependencies:
     - name: planka
@@ -565,4 +578,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-02-12T14:20:05.602972583-06:00"
+generated: "2026-02-12T14:38:17.568737581-06:00"
