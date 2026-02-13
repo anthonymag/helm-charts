@@ -23,21 +23,14 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Add dependency repos 
+      - uses: azure/setup-helm@4
+
+      - name: Add dependency repos
         run: |
-          for repo in $(grep -R "repository:" charts/ | awk '{print $2}' | sort -u); do
-            echo "Adding repo $repo"
-            name=$(echo $repo | sed 's|https\?://||' | tr '/.' '-')
-            helm repo add $name $repo || true
-          done
-      
-          helm repo update
-      
-      - name: Build dependencies
-        run: |
-          for chart in charts/*; do
-            helm dependency build $chart
-          done
+          helm repo add argo https://argoproj.github.io/argo-helm
+          helm repo add anza-labs https://anza-labs.github.io/charts
+          helm repo add nextcloud https://nextcloud.github.io/helm
+          helm repo add planka https://plankanban.github.io/planka
 
 
       - name: Run chart-releaser
