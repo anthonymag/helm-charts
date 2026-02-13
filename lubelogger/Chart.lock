@@ -1,6 +1,0 @@
-dependencies:
-- name: lubelogger
-  repository: https://anza-labs.github.io/charts
-  version: 1.4.2
-digest: sha256:ac2cba1fa17409bd085c11b0ec7e94e8dbf0fb6e1e8ed41204e30614cdb300e3
-generated: "2026-02-10T13:08:06.889870441-06:00"
