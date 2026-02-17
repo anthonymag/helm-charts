@@ -516,7 +516,7 @@ nextcloud:
     enabled: true
   
     # Either 'sidecar' or 'cronjob'
-    type: sidecar
+    type: cronjob
   
     # Runs crond as a sidecar container in the Nextcloud pod
     # Note: crond requires root
@@ -590,10 +590,10 @@ nextcloud:
       # Allow configuration of lifecycle hooks
       # ref: https://kubernetes.io/docs/tasks/configure-pod-container/attach-handler-lifecycle-event/
       # Set securityContext parameters. For example, you may need to define runAsNonRoot directive
-      securityContext: {}
-      #   runAsUser: 33
-      #   runAsGroup: 33
-      #   runAsNonRoot: true
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
       #   readOnlyRootFilesystem: true
   
       # The command to run in the cronjob container
