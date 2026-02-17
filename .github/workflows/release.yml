@@ -32,6 +32,7 @@ jobs:
           helm repo add anza-labs https://anza-labs.github.io/charts
           helm repo add nextcloud https://nextcloud.github.io/helm
           helm repo add planka https://plankanban.github.io/planka
+          helm repo add immich https://immich-app.github.io/immich-charts
 
 
       - name: Run chart-releaser

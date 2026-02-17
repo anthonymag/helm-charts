@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: immich-library
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 500Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/loot/data/immich"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: immich-library
+  namespace: immich 
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 500Gi
+
