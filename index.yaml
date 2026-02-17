@@ -156,6 +156,20 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-0.1.0/argocd-image-updater-0.1.0.tgz
     version: 0.1.0
+  immich:
+  - apiVersion: v2
+    created: "2026-02-17T23:11:33.864841657Z"
+    dependencies:
+    - name: immich
+      repository: https://immich-app.github.io/immich-charts
+      version: 0.10.3
+    description: immich
+    digest: f75e0022b3197aec4f1832923b496bd995ac32696741838c0d8dec44e1814b69
+    name: immich
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/immich-0.0.1/immich-0.0.1.tgz
+    version: 0.0.1
   lubelogger:
   - apiVersion: v2
     created: "2026-02-13T09:24:22.927441524-06:00"
@@ -647,4 +661,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-02-17T22:20:35.537941224Z"
+generated: "2026-02-17T23:11:33.864959847Z"
