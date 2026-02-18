@@ -2,7 +2,7 @@ immich:
 
   controllers:
     main:
-      replicas: 1
+      replicas: 2
       containers:
         main:
           env:
@@ -39,10 +39,10 @@ immich:
     enabled: true
     persistence:
       data:
-        enabled: false
+        enabled: true
         size: 1Gi
         type: persistentVolumeClaim
-        accessMode: ReadWriteMany
+        accessMode: ReadWriteOnce
 
   server:
     controllers:
@@ -56,7 +56,6 @@ immich:
                     secretKeyRef:
                       name: immich-db
                       key: db-hostname
-                DB_PORT: "5432"
                 DB_USERNAME:
                   valueFrom:
                     secretKeyRef:
