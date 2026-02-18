@@ -1,5 +1,18 @@
 immich:
-  
+
+  controllers:
+    main:
+      replicas: 1
+      containers:
+        main:
+          env:
+            REDIS_HOSTNAME: '{{ printf "%s-valkey" .Release.Name }}'
+            IMMICH_MACHINE_LEARNING_URL: 'http://svc.home.arpa:3003'
+
+  service:
+    main:
+      type: NodePort
+
   immich:
     metrics:
       # Enabling this will create the service monitors needed to monitor immich with the prometheus operator
@@ -24,4 +37,29 @@ immich:
   
   machine-learning:
     # turned off until I can mount the GPU to a kubernetes node; for now it's running on the Docker node with the iGPU
+    enabled: false
+
+  server:
+    controllers:
+      main:
+        containers:
+          main:
+            env:
+                DB_DATABASE_NAME: immich
+                DB_HOSTNAME: 
+                  valueFrom:
+                    secretKeyRef:
+                      name: immich-db
+                      key: db-hostname
+                DB_PORT: "5432"
+                DB_USERNAME:
+                  valueFrom:
+                    secretKeyRef:
+                      name: immich-db
+                      key: db-username
+                DB_PASSWORD:
+                  valueFrom:
+                    secretKeyRef:
+                      name: immich-db
+                      key: db-password
 
