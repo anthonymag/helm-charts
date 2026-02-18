@@ -9,10 +9,6 @@ immich:
             REDIS_HOSTNAME: '{{ printf "%s-valkey" .Release.Name }}'
             IMMICH_MACHINE_LEARNING_URL: 'http://svc.home.arpa:3003'
 
-  service:
-    main:
-      type: NodePort
-
   immich:
     metrics:
       # Enabling this will create the service monitors needed to monitor immich with the prometheus operator
@@ -39,6 +35,15 @@ immich:
     # turned off until I can mount the GPU to a kubernetes node; for now it's running on the Docker node with the iGPU
     enabled: false
 
+  valkey:
+    enabled: true
+    persistence:
+      data:
+        enabled: true
+        size: 1Gi
+        type: persistentVolumeClaim
+        accessMode: ReadWriteMany
+
   server:
     controllers:
       main:
@@ -62,4 +67,8 @@ immich:
                     secretKeyRef:
                       name: immich-db
                       key: db-password
+
+  service:
+    main:
+      type: NodePort
 
