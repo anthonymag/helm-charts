@@ -158,6 +158,19 @@ entries:
     version: 0.1.0
   immich:
   - apiVersion: v2
+    created: "2026-02-18T20:33:11.892470021Z"
+    dependencies:
+    - name: immich
+      repository: https://immich-app.github.io/immich-charts
+      version: 0.10.3
+    description: immich
+    digest: 42a6ac1a1e521b7b1c15900e0875bced2b5da88b337fc1e2c04a02009acda8d4
+    name: immich
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/immich-0.0.3/immich-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
     created: "2026-02-18T00:06:53.632740927Z"
     dependencies:
     - name: immich
@@ -674,4 +687,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-02-18T00:06:53.632839645Z"
+generated: "2026-02-18T20:33:11.892575107Z"
