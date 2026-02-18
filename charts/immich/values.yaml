@@ -39,7 +39,7 @@ immich:
     enabled: true
     persistence:
       data:
-        enabled: true
+        enabled: false
         size: 1Gi
         type: persistentVolumeClaim
         accessMode: ReadWriteMany
