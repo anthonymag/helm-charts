@@ -2,7 +2,7 @@ immich:
 
   controllers:
     main:
-      replicas: 2
+      replicas: 1
       containers:
         main:
           env:
