@@ -8,12 +8,17 @@ planka:
   nodeSelector:
     class: sanji
 
+  persistence:
+    enabled: true
+    existingClaim: planka
+    accessMode: ReadWriteMany
+    size: 5Gi
+
   postgresql:
     enabled: false
 
   service:
     type: NodePort
-    port: 13370
 
   existingDburlSecret: "planka-dburl"
 
