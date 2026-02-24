@@ -187,7 +187,14 @@ nextcloud:
     #        key: secret_key
   
     # Extra init containers that runs before pods start.
-    extraInitContainers: []
+    # TODO: remove after PR is merged: https://github.com/nextcloud/helm/pull/752
+    extraInitContainers: 
+      - name: init-redis-session-ini
+        image: mirror.gcr.io/alpine:latest
+        command: ['touch', '/usr/local/etc/php/conf.d/redis-session.ini']
+        volumeMounts:
+          - name: php-confd
+            mountPath: "/usr/local/etc/php/conf.d"
     #  - name: do-something
     #    image: busybox
     #    command: ['do', 'something']
@@ -203,13 +210,18 @@ nextcloud:
   
     # Extra mounts for the pods. Example shown is for connecting a legacy NFS volume
     # to NextCloud pods in Kubernetes. This can then be configured in External Storage
+    # TODO: remove this after this PR is merged: https://github.com/nextcloud/helm/pull/752
     extraVolumes:
-    #  - name: nfs
-    #    nfs:
-    #      server: "10.0.0.1"
-    #      path: "/nextcloud_data"
-    #      readOnly: false
+      - name: php-confd
+        emptyDir: {}
+      - name: tmpfs
+        emptyDir: {}
     extraVolumeMounts:
+      - name: php-confd
+        mountPath: "/usr/local/etc/php/conf.d/redis-session.ini"
+        subPath: redis-session.ini
+      - name: tmpfs
+        mountPath: "/tmp"
     #  - name: nfs
     #    mountPath: "/legacy_data"
   
