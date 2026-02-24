@@ -449,7 +449,7 @@ nextcloud:
         #existingClaim: nextcloud-cache
     replica:
       replicaCount: 0
-      persistence:
+      #persistence:
         #enabled: true
         #existingClaim: nextcloud-cache
   
