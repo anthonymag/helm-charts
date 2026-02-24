@@ -1,7 +1,6 @@
 nextcloud:
   
-  # see: https://github.com/nextcloud/helm/issues/488
-  replicaCount: 1
+  replicaCount: 2
 
   nextcloud:
     host: cloud.anthonymag.net
