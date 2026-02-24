@@ -448,9 +448,7 @@ nextcloud:
         enabled: true
         existingClaim: nextcloud-cache
     replica:
-      persistence:
-        enabled: true
-        existingClaim: nextcloud-cache
+      replicaCount: 0
   
   ##
   ## Collabora chart configuration
