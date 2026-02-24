@@ -195,6 +195,9 @@ nextcloud:
         volumeMounts:
           - name: php-confd
             mountPath: "/usr/local/etc/php/conf.d"
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
     #  - name: do-something
     #    image: busybox
     #    command: ['do', 'something']
