@@ -67,12 +67,12 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/mnt/loot/services/cache/nextcloud"
+    path: "/mnt/loot/services/nextcloud/cache"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nextcloud-data
+  name: nextcloud-cache
   namespace: nextcloud
 spec:
   storageClassName: manual
