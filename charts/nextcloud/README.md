@@ -26,5 +26,14 @@ metadata:
   name: nextcloud-db
   namespace: nextcloud
 type: Opaque
+---
+apiVersion: v1
+data:
+  redis-password: changemebase64
+kind: Secret
+metadata:
+  name: nextcloud-cache
+  namespace: nextcloud
+type: Opaque
 ```
 

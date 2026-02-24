@@ -53,4 +53,32 @@ spec:
   resources:
     requests:
       storage: 100Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nextcloud-cache
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/loot/services/nextcloud/cache"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nextcloud-data
+  namespace: nextcloud
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 8Gi
 

@@ -1,6 +1,5 @@
 nextcloud:
   
-  # TODO: enable redis. NextCloud sessions have a lot of issues with multiple replicas if Redis is unused
   # see: https://github.com/nextcloud/helm/issues/488
   replicaCount: 1
 
@@ -430,7 +429,7 @@ nextcloud:
   ##
   
   redis:
-    enabled: false
+    enabled: true
     image:
       registry: docker.io
       repository: bitnamilegacy/redis
@@ -438,15 +437,16 @@ nextcloud:
       enabled: true
       password: "changeme"
       # name of an existing secret with Redis® credentials (instead of auth.password), must be created ahead of time
-      existingSecret: ""
+      existingSecret: nextcloud-cache
       # Password key to be retrieved from existing secret
-      existingSecretPasswordKey: ""
+      existingSecretPasswordKey: redis-password
     # Since Redis is used for caching only, you might want to use a storageClass with different reclaim policy and backup settings
     global:
       storageClass: ""
     master:
       persistence:
         enabled: true
+        existingClaim: nextcloud-cache
     replica:
       persistence:
         enabled: true
