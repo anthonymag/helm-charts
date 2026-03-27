@@ -2,7 +2,6 @@ immich:
 
   controllers:
     main:
-      replicas: 1
       containers:
         main:
           env:
@@ -14,23 +13,9 @@ immich:
       # Enabling this will create the service monitors needed to monitor immich with the prometheus operator
       enabled: false
     persistence:
-      # Main data store for all photos shared between different components.
       library:
-        # Automatically creating the library volume is not supported by this chart
-        # You have to specify an existing PVC to use
         existingClaim: immich-library
 
-    # ref: https://immich.app/docs/install/config-file/
-    configuration: {}
-      # trash:
-      #   enabled: false
-      #   days: 30
-      # storageTemplate:
-      #   enabled: true
-      #   template: "{{y}}/{{y}}-{{MM}}-{{dd}}/{{filename}}"
-    # Sets the resource Kind to store configuration in. Must be either ConfigMap or Secret.
-    configurationKind: ConfigMap
-  
   machine-learning:
     # turned off until I can mount the GPU to a kubernetes node; for now it's running on the Docker node with the iGPU
     enabled: false
@@ -47,8 +32,11 @@ immich:
   server:
     controllers:
       main:
+        replicas: 2
         containers:
           main:
+            image:
+              tag: v2.6.3
             env:
                 DB_DATABASE_NAME: immich
                 DB_HOSTNAME: 
