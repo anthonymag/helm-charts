@@ -3,10 +3,10 @@ name: lubelogger
 description: Lubelogger
 
 type: application
-version: 2.1.2
+version: 2.1.3
 
 dependencies:
   - name: lubelogger
-    version: 1.4.2
+    version: 1.4.3
     repository: "https://anza-labs.github.io/charts"
 
