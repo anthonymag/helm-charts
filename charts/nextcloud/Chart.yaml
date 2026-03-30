@@ -4,10 +4,10 @@ description: Nextcloud
 icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
 
 type: application
-version: 1.2.9
+version: 1.2.10
 
 dependencies:
   - name: nextcloud
-    version: 8.9.1
+    version: 9.0.4
     repository: "https://nextcloud.github.io/helm/"
 

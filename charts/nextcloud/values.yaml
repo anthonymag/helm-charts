@@ -566,8 +566,8 @@ nextcloud:
       # crond does not work when not running as root user
       # Note: requires `persistence.enabled=true`
       schedule: "*/5 * * * *"
-      successfulJobsHistoryLimit: 3
-      failedJobsHistoryLimit: 5
+      successfulJobsHistoryLimit: 1
+      failedJobsHistoryLimit: 1
       activeDeadlineSeconds:
       # -- Additional labels for cronjob
       labels: {}
