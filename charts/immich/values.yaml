@@ -44,6 +44,11 @@ immich:
                     secretKeyRef:
                       name: immich-db
                       key: db-hostname
+                DB_PORT:
+                  valueFrom:
+                    secretKeyRef:
+                      name: immich-db
+                      key: db-port
                 DB_USERNAME:
                   valueFrom:
                     secretKeyRef:
