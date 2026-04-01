@@ -1,6 +1,6 @@
 nextcloud:
   
-  replicaCount: 2
+  replicaCount: 1
 
   nextcloud:
     host: cloud.anthonymag.net
@@ -65,7 +65,9 @@ nextcloud:
     securityContext: 
       runAsUser: 1000
       runAsGroup: 1000
-  
+
+  collabora:
+    enabled: true
   
   internalDatabase:
     enabled: false
