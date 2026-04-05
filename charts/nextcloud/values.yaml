@@ -67,7 +67,7 @@ nextcloud:
       runAsGroup: 1000
 
   collabora:
-    enabled: true
+    enabled: false
   
   internalDatabase:
     enabled: false
