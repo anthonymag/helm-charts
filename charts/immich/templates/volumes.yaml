@@ -25,4 +25,32 @@ spec:
   resources:
     requests:
       storage: 500Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: immich-valkey
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/loot/services/immich/valkey"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: immich-valkey
+  namespace: immich
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
 

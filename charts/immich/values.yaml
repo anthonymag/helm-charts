@@ -24,10 +24,7 @@ immich:
     enabled: true
     persistence:
       data:
-        enabled: true
-        size: 1Gi
-        type: persistentVolumeClaim
-        accessMode: ReadWriteOnce
+        existingClaim: immich-valkey
 
   server:
     controllers:
