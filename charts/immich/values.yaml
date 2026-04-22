@@ -26,6 +26,10 @@ immich:
       data:
         existingClaim: immich-valkey
 
+  defaultPodOptions:
+    nodeSelector:
+      class: sanji
+
   server:
     service:
       main:
