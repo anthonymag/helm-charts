@@ -3,7 +3,7 @@ planka:
   
   existingSecretkeySecret: "planka-secretkey"
   existingAdminCredsSecret: "planka-admin-creds"
-  baseUrl: "https://planka.magdavis.click"
+  baseUrl: "https://planka.anthonymag.net"
 
   nodeSelector:
     class: sanji
