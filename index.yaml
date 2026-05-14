@@ -525,6 +525,20 @@ entries:
     version: 0.1.0
   nextcloud:
   - apiVersion: v2
+    created: "2026-05-14T22:19:43.205230957Z"
+    dependencies:
+    - name: nextcloud
+      repository: https://nextcloud.github.io/helm/
+      version: 9.1.0
+    description: Nextcloud
+    digest: 745e0784a1e95e980e10cbca1e75e79c7953e1e34122572dc6e9aec1b3a06cca
+    icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
+    name: nextcloud
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/nextcloud-2.1.2/nextcloud-2.1.2.tgz
+    version: 2.1.2
+  - apiVersion: v2
     created: "2026-05-14T21:47:17.201321344Z"
     dependencies:
     - name: nextcloud
@@ -1148,4 +1162,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-05-14T21:47:17.201686532Z"
+generated: "2026-05-14T22:19:43.20556452Z"
