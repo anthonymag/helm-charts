@@ -55,12 +55,17 @@ nextcloud:
         emptyDir: {}
       - name: tmpfs
         emptyDir: {}
+      - name: nextcloud-media
+        persistentVolumeClaim:
+          claimName: nextcloud-media
     extraVolumeMounts:
       - name: php-confd
         mountPath: "/usr/local/etc/php/conf.d/redis-session.ini"
         subPath: redis-session.ini
       - name: tmpfs
         mountPath: "/tmp"
+      - name: nextcloud-media
+        mountPath: "/media"
 
     securityContext: 
       runAsUser: 1000
