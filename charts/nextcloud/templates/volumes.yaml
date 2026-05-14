@@ -53,4 +53,32 @@ spec:
   resources:
     requests:
       storage: 100Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nextcloud-media
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 19Ti
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/sunny/media"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nextcloud-media
+  namespace: nextcloud
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: 19Ti
 
