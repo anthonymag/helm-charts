@@ -65,7 +65,7 @@ spec:
   capacity:
     storage: 19Ti
   accessModes:
-    - ReadWriteMany
+    - ReadOnlyMany
   hostPath:
     path: "/mnt/sunny/media"
 ---
