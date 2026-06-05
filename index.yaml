@@ -156,6 +156,20 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-0.1.0/argocd-image-updater-0.1.0.tgz
     version: 0.1.0
+  home-assistant:
+  - apiVersion: v2
+    created: "2026-06-05T21:18:52.900708696Z"
+    dependencies:
+    - name: home-assistant
+      repository: https://pajikos.github.io/home-assistant-helm-chart/
+      version: 0.3.62
+    description: Home Assistant
+    digest: a9582686474167236edb4b8d74bb1cc0470f3dda0b8fd82e2504729245ff40d8
+    name: home-assistant
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/home-assistant-0.0.1/home-assistant-0.0.1.tgz
+    version: 0.0.1
   immich:
   - apiVersion: v2
     created: "2026-04-22T17:59:06.126515012Z"
@@ -1162,4 +1176,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-05-14T22:19:43.20556452Z"
+generated: "2026-06-05T21:18:52.900919359Z"
