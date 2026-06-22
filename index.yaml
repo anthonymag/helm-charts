@@ -156,6 +156,22 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-image-updater-0.1.0/argocd-image-updater-0.1.0.tgz
     version: 0.1.0
+  gotosocial:
+  - apiVersion: v2
+    created: "2026-06-22T21:02:50.141786046Z"
+    dependencies:
+    - name: gotosocial
+      repository: https://charts.schoenwald.aero
+      version: 2.1.0
+    description: GoToSocial is a federated social media server, written in Go, that
+      implements the ActivityPub protocol.
+    digest: 161d1e35bc920ff8eaef1214dfdc94e6011e8eb57a2c891c62454e4d41d9bb96
+    icon: https://raw.githubusercontent.com/supabase/gotosocial/main/assets/icon.png
+    name: gotosocial
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/gotosocial-0.0.1/gotosocial-0.0.1.tgz
+    version: 0.0.1
   home-assistant:
   - apiVersion: v2
     created: "2026-06-05T21:18:52.900708696Z"
@@ -1176,4 +1192,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-06-05T21:18:52.900919359Z"
+generated: "2026-06-22T21:02:50.141969371Z"
