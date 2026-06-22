@@ -1,0 +1,14 @@
+apiVersion: v2
+name: gotosocial
+description: GoToSocial is a federated social media server, written in Go, that implements the ActivityPub protocol.
+icon: https://raw.githubusercontent.com/supabase/gotosocial/main/assets/icon.png
+
+type: application
+version: 0.0.1
+
+dependencies:
+  - name: gotosocial
+    version: 2.1.0
+    repository: https://charts.schoenwald.aero
+
+

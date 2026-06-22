@@ -1,0 +1,6 @@
+dependencies:
+- name: gotosocial
+  repository: https://charts.schoenwald.aero
+  version: 2.1.0
+digest: sha256:10ff3d88b1dbe48af1ace881192b4509c808bab7e637e89625bf746bb497f6b4
+generated: "2026-06-22T15:47:29.156705942-05:00"

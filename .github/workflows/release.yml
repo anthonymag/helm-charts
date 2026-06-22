@@ -34,6 +34,7 @@ jobs:
           helm repo add planka https://plankanban.github.io/planka
           helm repo add immich https://immich-app.github.io/immich-charts
           helm repo add pajikos https://pajikos.github.io/home-assistant-helm-chart
+          helm repo add schoenwald https://charts.schoenwald.aero
 
 
       - name: Run chart-releaser
