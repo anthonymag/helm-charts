@@ -24,7 +24,10 @@ immich:
     enabled: true
     persistence:
       data:
+        enabled: true
+        type: persistentVolumeClaim
         existingClaim: immich-valkey
+#        existingClaim: immich-valkey
 
   defaultPodOptions:
     nodeSelector:
