@@ -3,10 +3,10 @@ name: home-assistant
 description: Home Assistant
 
 type: application
-version: 0.0.1
+version: 0.0.2
 
 dependencies:
   - name: home-assistant
-    version: 0.3.62
+    version: 0.3.84
     repository: "https://pajikos.github.io/home-assistant-helm-chart/"
 
