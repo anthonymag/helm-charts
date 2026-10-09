@@ -188,6 +188,19 @@ entries:
     version: 0.0.1
   home-assistant:
   - apiVersion: v2
+    created: "2026-10-09T15:42:37.157846021Z"
+    dependencies:
+    - name: home-assistant
+      repository: https://pajikos.github.io/home-assistant-helm-chart/
+      version: 0.3.84
+    description: Home Assistant
+    digest: e3b4ac4d76649ed6741e9dfd78b9b92f90558a82660d183ff83c0b097de384e0
+    name: home-assistant
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/home-assistant-0.0.2/home-assistant-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
     created: "2026-06-05T21:18:52.900708696Z"
     dependencies:
     - name: home-assistant
@@ -1219,4 +1232,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-09-03T22:11:51.47139039Z"
+generated: "2026-10-09T15:42:37.158043145Z"
