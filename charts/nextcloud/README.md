@@ -36,4 +36,3 @@ metadata:
   namespace: nextcloud
 type: Opaque
 ```
-

@@ -1,5 +1,5 @@
 nextcloud:
-  
+
   replicaCount: 1
 
   nextcloud:
@@ -19,14 +19,14 @@ nextcloud:
       - sanji2.home.arpa
       - sanji3
       - sanji3.home.arpa
-  
+
     hooks:
       pre-installation:
       post-installation:
       pre-upgrade:
       post-upgrade:
       before-starting:
-  
+
     ## Strategy used to replace old pods
     ## IMPORTANT: use with care, it is suggested to leave as that for upgrade purposes
     ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
@@ -36,9 +36,9 @@ nextcloud:
       # rollingUpdate:
       #   maxSurge: 1
       #   maxUnavailable: 0
-  
+
     # TODO: remove after PR is merged: https://github.com/nextcloud/helm/pull/752
-    extraInitContainers: 
+    extraInitContainers:
       - name: init-redis-session-ini
         image: mirror.gcr.io/alpine:latest
         command: ['touch', '/usr/local/etc/php/conf.d/redis-session.ini']
@@ -48,7 +48,7 @@ nextcloud:
         securityContext:
           runAsUser: 1000
           runAsGroup: 1000
-  
+
     # TODO: remove after PR is merged: https://github.com/nextcloud/helm/pull/752
     extraVolumes:
       - name: php-confd
@@ -67,21 +67,21 @@ nextcloud:
       - name: nextcloud-media
         mountPath: "/media"
 
-    securityContext: 
+    securityContext:
       runAsUser: 1000
       runAsGroup: 1000
 
   collabora:
     enabled: false
-  
+
   internalDatabase:
     enabled: false
-  
+
   externalDatabase:
     enabled: true
-  
+
     type: postgresql
-  
+
     existingSecret:
       enabled: true
       secretName: nextcloud-db
@@ -89,25 +89,25 @@ nextcloud:
       passwordKey: db-password
       hostKey: db-hostname
       databaseKey: db-name
-  
+
   externalRedis:
     enabled: false
-  
+
     ## Redis host
     host: ""
-  
+
     ## Redis port
     port: "6379"
-  
+
     ## Redis password
     password: ""
-  
+
     ## Use a existing secret
     existingSecret:
       enabled: false
       # secretName: nameofsecret
       passwordKey: redis-password
-  
+
   redis:
     enabled: true
     auth:
@@ -122,19 +122,19 @@ nextcloud:
       #persistence:
         #enabled: true
         #existingClaim: nextcloud-cache
-  
+
   cronjob:
     enabled: true
-  
+
     type: cronjob
-  
+
     # Note: crond requires root
     sidecar:
-      securityContext: 
+      securityContext:
         runAsUser: 1000
         runAsGroup: 1000
         runAsNonRoot: true
-  
+
     # Note: can run as non-root user. Should run as same user as the Nextcloud pod.
     cronjob:
       # Use a CronJob instead of crond sidecar container
@@ -148,19 +148,18 @@ nextcloud:
         runAsUser: 1000
         runAsGroup: 1000
         runAsNonRoot: true
-  
+
   service:
     type: NodePort
     port: 80
-  
+
   persistence:
     enabled: true
     existingClaim: nextcloud-services
-  
+
     nextcloudData:
       enabled: true
       existingClaim: nextcloud-data
-  
+
   nodeSelector:
     class: sanji
-  

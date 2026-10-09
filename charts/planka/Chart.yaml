@@ -9,4 +9,3 @@ dependencies:
   - name: planka
     version: 2.1.0
     repository: https://plankanban.github.io/planka
-

@@ -9,4 +9,3 @@ dependencies:
   - name: lubelogger
     version: 1.4.3
     repository: "https://anza-labs.github.io/charts"
-

@@ -1,6 +1,6 @@
 planka:
   replicaCount: 2
-  
+
   existingSecretkeySecret: "planka-secretkey"
   existingAdminCredsSecret: "planka-admin-creds"
   baseUrl: "https://planka.anthonymag.net"
@@ -25,4 +25,3 @@ planka:
     type: NodePort
 
   existingDburlSecret: "planka-dburl"
-

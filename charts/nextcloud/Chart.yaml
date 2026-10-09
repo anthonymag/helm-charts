@@ -10,4 +10,3 @@ dependencies:
   - name: nextcloud
     version: 9.1.0
     repository: "https://nextcloud.github.io/helm/"
-

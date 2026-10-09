@@ -46,7 +46,7 @@ immich:
               tag: v2.6.3
             env:
                 DB_DATABASE_NAME: immich
-                DB_HOSTNAME: 
+                DB_HOSTNAME:
                   valueFrom:
                     secretKeyRef:
                       name: immich-db
@@ -66,4 +66,3 @@ immich:
                     secretKeyRef:
                       name: immich-db
                       key: db-password
-
