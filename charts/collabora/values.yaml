@@ -36,7 +36,7 @@ collabora-online:
     #   aliases: ["<protocol>://<its-first-alias>:<port>, <protocol>://<its-second-alias>:<port>"]
     aliasgroups: []
 
-    extra_params: --o:ssl.enable=true --o:ssl.termination=false
+    extra_params: --o:ssl.enable=false --o:ssl.termination=true
 
     # External hostname:port of the server running coolwsd.
     # If empty, it's derived from the request (please set it if this doesn't work).
