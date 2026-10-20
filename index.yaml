@@ -172,6 +172,19 @@ entries:
     version: 0.1.0
   collabora:
   - apiVersion: v2
+    created: "2026-10-20T21:30:18.718170821Z"
+    dependencies:
+    - name: collabora-online
+      repository: https://collaboraonline.github.io/online
+      version: 1.3.6
+    description: Collabora
+    digest: 0113793f14ff2f9289d11920ca4d548dea7a9648c067d11864cb63307abaf748
+    name: collabora
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/collabora-0.0.4/collabora-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
     created: "2026-10-20T20:08:23.507677808Z"
     dependencies:
     - name: collabora-online
@@ -1285,4 +1298,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-10-20T20:08:23.507863886Z"
+generated: "2026-10-20T21:30:18.718369272Z"
