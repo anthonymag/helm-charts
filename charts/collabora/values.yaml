@@ -194,7 +194,7 @@ collabora-online:
   #  runAsUser: 1000
 
   service:
-    type: NodePort
+    type: ClusterIP
     port: 9980
     annotations: {}
 
