@@ -37,6 +37,7 @@ jobs:
           helm repo add schoenwald https://charts.schoenwald.aero
           helm repo add cert-manager https://charts.jetstack.io
           helm repo add collabora https://collaboraonline.github.io/online
+          helm repo add djjudas21 https://djjudas21.github.io/charts
 
 
       - name: Run chart-releaser
