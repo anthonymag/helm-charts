@@ -475,6 +475,20 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/immich-0.0.1/immich-0.0.1.tgz
     version: 0.0.1
+  jellystat:
+  - apiVersion: v2
+    created: "2026-10-23T19:24:11.089726953Z"
+    dependencies:
+    - name: jellystat
+      repository: https://djjudas21.github.io/charts
+      version: 1.0.2
+    description: JellyStat
+    digest: 07a173df8899c2a9021ba2d7ca60f9782d50bfd6f19352a5cc5563bd28b1519d
+    name: jellystat
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/jellystat-0.0.1/jellystat-0.0.1.tgz
+    version: 0.0.1
   lubelogger:
   - apiVersion: v2
     created: "2026-03-27T14:37:45.143027297Z"
@@ -1311,4 +1325,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-10-20T21:38:30.416536965Z"
+generated: "2026-10-23T19:24:11.08986413Z"
