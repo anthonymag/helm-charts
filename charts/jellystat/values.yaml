@@ -1,0 +1,30 @@
+jellystat:
+  jwtSecret: change-me
+
+  podSecurityContext:
+    runAsUser: 1000
+    runAsGroup: 1000
+
+  service:
+    type: NodePort
+
+  resources:
+    limits:
+      cpu: 50m
+      memory: 128Mi
+
+  volumes:
+    - name: backup-data
+      persistentVolumeClaim:
+        claimName: jellystat-backup-data
+
+  # Additional volumeMounts on the output Deployment definition.
+  volumeMounts:
+    - name: backup-data
+      mountPath: "/app/backend/backup-data"
+
+  nodeSelector:
+    class: sanji
+
+  postgresql:
+    existingSecret: "jellystat-db"

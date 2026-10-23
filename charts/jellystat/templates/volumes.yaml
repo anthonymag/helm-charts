@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jellystat-backup-data
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 500Mi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/loot/services/jellystat/backup"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jellystat-backup-data
+  namespace: jellystat
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 500Mi

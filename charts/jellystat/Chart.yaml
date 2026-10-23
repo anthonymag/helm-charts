@@ -1,0 +1,11 @@
+apiVersion: v2
+name: jellystat
+description: JellyStat
+
+type: application
+version: 0.0.1
+
+dependencies:
+  - name: jellystat
+    version: 1.0.2
+    repository: "https://djjudas21.github.io/charts"
