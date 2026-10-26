@@ -477,6 +477,19 @@ entries:
     version: 0.0.1
   jellystat:
   - apiVersion: v2
+    created: "2026-10-26T14:34:50.40630205Z"
+    dependencies:
+    - name: jellystat
+      repository: https://djjudas21.github.io/charts
+      version: 1.0.3
+    description: JellyStat
+    digest: b60ec2cf97b5c7b5aa6753a831c25d48e4240cb8c7ba7024680679a47e5c8eff
+    name: jellystat
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/jellystat-1.0.0/jellystat-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     created: "2026-10-23T19:24:11.089726953Z"
     dependencies:
     - name: jellystat
@@ -1325,4 +1338,4 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-10-23T19:24:11.08986413Z"
+generated: "2026-10-26T14:34:50.406410169Z"
