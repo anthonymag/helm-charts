@@ -7,5 +7,5 @@ version: 0.0.1
 
 dependencies:
   - name: jellystat
-    version: 1.0.2
+    version: 1.0.3
     repository: "https://djjudas21.github.io/charts"

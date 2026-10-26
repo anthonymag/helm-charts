@@ -1,6 +1,29 @@
 jellystat:
   jwtSecret: change-me
 
+  extraEnv:
+    - name: POSTGRES_DB
+      valueFrom:
+        secretKeyRef:
+          name: jellystat-db
+          key: db
+    - name: JS_GEOLITE_ACCOUNT_ID
+      valueFrom:
+        secretKeyRef:
+          name: jellystat-geolite
+          key: account-id
+    - name: JS_GEOLITE_LICENSE_KEY
+      valueFrom:
+        secretKeyRef:
+          name: jellystat-geolite
+          key: license-key
+    - name: TZ
+      value: "America/Chicago"
+
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 1000
+
   podSecurityContext:
     runAsUser: 1000
     runAsGroup: 1000

@@ -1,6 +1,6 @@
 dependencies:
 - name: jellystat
   repository: https://djjudas21.github.io/charts
-  version: 1.0.2
-digest: sha256:275bc1dc7d6664711dc285bf3d7a32d041e0b72757b5b344da3531276ba5c083
-generated: "2026-10-23T13:26:28.621600794-05:00"
+  version: 1.0.3
+digest: sha256:4dc2528895a4ad153e9a7b1beadb52ff39efb210d6834f555666104479df1efb
+generated: "2026-10-26T09:18:16.117543003-05:00"
