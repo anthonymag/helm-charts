@@ -38,6 +38,7 @@ jobs:
           helm repo add cert-manager https://charts.jetstack.io
           helm repo add collabora https://collaboraonline.github.io/online
           helm repo add djjudas21 https://djjudas21.github.io/charts
+          helm repo add helmforge https://repo.helmforge.dev
 
 
       - name: Run chart-releaser

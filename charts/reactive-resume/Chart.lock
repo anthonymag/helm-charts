@@ -1,0 +1,6 @@
+dependencies:
+- name: reactive-resume
+  repository: https://repo.helmforge.dev
+  version: 1.0.2
+digest: sha256:deffd49b31bf4704a55bc86e7c9d08f8dc8b6b6397f94ae8b8657a1a46e862f3
+generated: "2026-10-29T15:37:33.353385731-05:00"

@@ -1,0 +1,104 @@
+reactive-resume:
+  server:
+    publicUrl: https://cv.anthonymag.net
+
+  storage:
+    driver: local
+
+  service:
+    type: NodePort
+    port: 3000
+
+  externalSecrets:
+    # -- Enable this capability.
+    enabled: false
+    # -- ExternalSecret refresh interval.
+    refreshInterval: 1h
+    # -- ExternalSecret definitions using the HelmForge items contract.
+    items: []
+  # -- Required native startup/readiness and listener liveness probes.
+
+  podSecurityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    runAsGroup: 1000
+    fsGroup: 1000
+
+  nodeSelector:
+    class: sanji
+
+  persistence:
+    enabled: true
+    existingClaim: reactive-resume-data
+
+  image:
+    repository: ghcr.io/amruthpillai/reactive-resume
+    tag: v5.3.0@sha256:c487ec5edcfe054bcb312fcd498f868e56f274756d0046b01c83f210855017ab
+    pullPolicy: IfNotPresent
+
+  bootstrap:
+    existingSecret: bootstrap-credentials
+    passwordKey: user-password
+
+  database:
+    host: chopper.home.arpa
+    port: 5432
+    name: reactive_resume
+    username: reactive_resume
+    passwordSecret: db-credentials
+    passwordKey: password
+    tls:
+      enabled: true
+      caSecret: ''
+      caKey: ca.crt
+  postgresql:
+    enabled: false
+  identity:
+    # -- Existing Secret with AUTH_SECRET and ENCRYPTION_SECRET; retain both across upgrades and recovery.
+    existingSecret: ''
+  # -- Authenticated SMTP with implicit TLS for native account email and recovery.
+  smtp:
+    # -- Enable native SMTP and unblock mail-dependent account endpoints.
+    enabled: false
+    # -- SMTP DNS hostname matching its TLS certificate.
+    host: ''
+    # -- Implicit TLS port; the chart does not expose opportunistic STARTTLS mode.
+    port: 465
+    # -- Native sender address, optionally including a display name.
+    from: ''
+    # -- SMTP authentication username.
+    username: ''
+    # -- Existing Secret containing the SMTP password.
+    existingSecret: ''
+    # -- Key containing the SMTP password.
+    passwordKey: password
+    # -- Optional additional CA trust for the SMTP server.
+    tls:
+      # -- Secret containing a PEM CA bundle; empty uses native system trust.
+      caSecret: ''
+      # -- CA certificate bundle key.
+      caKey: ca.crt
+  # -- Separate credential-free network probe helper; only its own HMAC key is mounted.
+  admission:
+    # -- Official Node image for the fixed-target HMAC network probe.
+    image:
+      # -- Official image repository or controlled mirror.
+      repository: docker.io/library/node
+      # -- Pinned image tag; the application also pins its verified manifest digest.
+      tag: 24.21.0-alpine
+      # -- Kubernetes image pull policy.
+      pullPolicy: IfNotPresent
+    # -- Kubernetes compute requests and limits.
+    resources:
+      # -- Resources reserved by the scheduler.
+      requests:
+        # -- Kubernetes CPU quantity.
+        cpu: 25m
+        # -- Kubernetes memory quantity.
+        memory: 32Mi
+      # -- Maximum container resource allocation.
+      limits:
+        # -- Kubernetes CPU quantity.
+        cpu: 200m
+        # -- Kubernetes memory quantity.
+        memory: 128Mi
