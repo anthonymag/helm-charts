@@ -1338,4 +1338,18 @@ entries:
     urls:
     - https://github.com/anthonymag/helm-charts/releases/download/argocd-0.2.0/planka-0.0.1.tgz
     version: 0.0.1
-generated: "2026-10-26T14:34:50.406410169Z"
+  reactive-resume:
+  - apiVersion: v2
+    created: "2026-10-29T21:37:15.897078115Z"
+    dependencies:
+    - name: reactive-resume
+      repository: https://repo.helmforge.dev
+      version: 1.0.2
+    description: Reactive Resume
+    digest: 7025e48268e0e6d05ed90c410b70009ba0ed3884c73316bebb8750e71a9b3e89
+    name: reactive-resume
+    type: application
+    urls:
+    - https://github.com/anthonymag/helm-charts/releases/download/reactive-resume-0.0.1/reactive-resume-0.0.1.tgz
+    version: 0.0.1
+generated: "2026-10-29T21:37:15.897276648Z"
